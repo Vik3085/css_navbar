@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6a28727c08.js" crossorigin="anonymous"></script>
+
+    <title>Esercizio navbar</title>
+
+
+    <style>
+
+        * {
+
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        nav {
+        display:flex;
+        width:100vw;
+        background-color: #222529;
+        justify-content: space-between;
+        color:#9a9d9f;
+        padding:15px;
+        }
+
+        .container-left {
+        display:flex;
+        align-items: center;
+        }
+
+        .container-right {
+        display:flex;
+        align-items: center;
+        }
+
+        .container-left ul li {
+            display:inline;
+            margin-left:20px;
+        }
+
+        a {
+            all:unset;
+            cursor:pointer;
+        }
+
+        a:hover {
+            color:#fff;
+        }
+
+        .btn-dropdown:hover {
+            color:#fff;
+        }
+        
+        .logo, menu {
+            margin-right:20px;
+        }
+
+        .input-search {
+        padding:10px;  
+        border-radius: 5px;
+        border:1px solid #898e92;
+        }
+
+        .btn-search {
+        background: none;
+        color:#408558;
+        padding:10px;
+        border:1px solid #408558;
+        border-radius: 5px;
+        cursor:pointer;
+        }
+
+        .btn-search:hover {
+        background: #408558;
+        color:#fff;
+        }
+
+        .btn-dropdown {
+        font-size: 16px;
+        border: none;
+        outline: none;  
+        background: none;
+        color:#9a9d9f;
+        cursor:pointer;
+        }
+        
+        .btn-disabled {
+        font-size: 16px;
+        border: none;
+        outline: none;  
+        background: none;
+        color:#5d6062;
+        }
+
+        .burger-menu-container {
+            display:none;
+        }
+
+        @media screen and (max-width:768px) {
+
+            .burger-menu-container {
+            display:flex;
+            }
+
+            .burger-menu {
+            border: none;
+            outline: none;  
+            background: none;
+            color:#fff;
+            font-size:24px;
+            cursor:pointer;
+            }
+
+            .menu,
+            .search-container {
+                display:none;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <!--  header -->
+    <header>
+        <!-- nav -->
+        <nav>
+
+            <div class="container-left">
+                <div class="logo">
+                <img src="https://via.placeholder.com/100x50" alt="logo">
+                </div>
+
+                <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Link</a></li>
+                    <button class="btn-dropdown">
+                        <li>Dropdown <i class="fa-solid fa-angle-down"></i>
+                            <!-- <ul>
+                                <li><a href="#">Prova01</a></li>
+                                <li><a href="#">Prova02</a></li>
+                                <li><a href="#">Prova03</a></li>
+                            </ul> -->
+                        </li>
+                    </button>
+                    <li><input class="btn-disabled" type="button" value="Disabled" disabled/></li>
+                </ul>
+                </div>
+            </div>
+
+        
+
+        <!-- section search -->
+
+        <div class="container-right">
+
+            <section class="search-container">
+                <input class="input-search" type="search" name="search" id="search" placeholder="Search"/>
+                <input class="btn-search" type="button" value="Search"/>
+            </section>
+
+
+            <div class="burger-menu-container">
+                <button class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        
+        <!-- fine section search -->
+        </nav>
+        <!-- fine nav -->
+    </header>    
+    <!-- fine header -->
+
+
+</body>
+</html>
